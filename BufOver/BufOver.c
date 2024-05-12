@@ -10,12 +10,12 @@ int main()
 	printf("address str1:%p\n", &str1);
 	printf("address str2:%p\n", &str2);
 
-	printf("入力してください str1:");
+	printf("input str1:");
 	scanf("%s", str1);
 	getchar();
-	printf("入力してください str2:");
+	printf("input str2:");
 	scanf("%s", str2);
 	getchar();
-	printf("出力 str1:%s\n出力 str2:%s\n", str1, str2);
+	printf("output str1:%s\noutput str2:%s\n", str1, str2);
 	getchar();
 }
