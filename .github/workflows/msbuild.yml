@@ -26,4 +26,11 @@ jobs:
 
     - name: BufOver Build
       working-directory: .\BufOver
-      run: msbuild /m /p:Configuration=Release ${{env.SOLUTION_FILE_PATH}}
+      run: msbuild /m /p:Configuration=Release .
+
+    - name: Release
+      if: startsWith(github.ref, 'refs/tags/')
+      uses: softprops/action-gh-release@v2
+      with:
+        files: |
+          x64\Release\BufOver.exe
